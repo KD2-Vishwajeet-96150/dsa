@@ -1,0 +1,15 @@
+package com.sunbeam;
+
+public class assi3_5 {
+    public ListNode middleNode(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;         // move 1 step
+            fast = fast.next.next;    // move 2 steps
+        }
+
+        return slow;
+    }
+}
